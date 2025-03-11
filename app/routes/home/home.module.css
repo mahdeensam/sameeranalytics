@@ -1,0 +1,142 @@
+.education {
+  padding: 4rem 0;
+  text-align: center;
+  border-radius: 32px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  margin-top: 1in;
+  
+  /* Add parallax effect */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add background image with parallax */
+.education::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-image: url('app/assets/background-image.jpg');*/
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.3; /* Semi-transparent */
+  z-index: -1;
+}
+
+.education.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Add a semi-transparent overlay to improve text readability */
+.educationContent {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 2rem;
+  border-radius: 22px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.education h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0ea6c1;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.educationItem {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(52, 3, 3, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.9); /* More opaque background for cards */
+}
+
+.educationItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.educationItem h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #267f80, #000000);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+  margin-bottom: 0.5rem;
+}
+
+.educationItem p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .education h2 {
+    font-size: 2rem;
+  }
+
+  .educationItem {
+    padding: 1.2rem;
+  }
+
+  .educationItem h3 {
+    font-size: 1.3rem;
+  }
+
+  .educationItem p {
+    font-size: 1rem;
+  }
+}
+
+/* Project section base styles with parallax */
+.project {
+  position: relative;
+  padding: 4rem 0;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+
+/* Add this to your home.module.css file */
+
+.home {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Main background parallax for entire homepage */
+.home::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://sameer-analytics.pages.dev/assets/background-image.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.15; /* Adjust opacity as needed */
+  z-index: -1;
+}
