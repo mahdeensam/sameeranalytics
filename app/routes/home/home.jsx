@@ -101,18 +101,38 @@ export const Home = () => {
 
       {/* Education Section */}
       <section id="education" ref={educationRef} className={`${styles.education} ${visibleSections.includes(educationRef.current) ? styles.visible : ''}`}>
-        <h2>Education</h2>
-        <div className={styles.educationItem}>
-          <h3>Dartmouth College (M.Eng. in Computer Engineering) - Accepted</h3>
-          <p>Focused on AI, data science, and system optimization.</p>
-        </div>
-        <div className={styles.educationItem}>
-          <h3>Colby College (B.A. in Computer Science)</h3>
-          <p>Graduated with a 3.92 Major GPA. Specialized in artificial intelligence and computational data analysis.</p>
-        </div>
-        <div className={styles.educationItem}>
-          <h3>University of Oxford (Visiting Student Program)</h3>
-          <p>Studied advanced AI models and ethical considerations in machine learning.</p>
+        <div className={styles.educationContent}>
+          <h2>EDUCATION</h2>
+          
+          <div className={styles.educationItem}>
+            <div className={styles.educationLogo}>
+              <img src="/1.jpg" alt="Harvard University Logo" />
+            </div>
+            <div className={styles.educationDetails}>
+              <h3>Harvard University (Master's in Learning Design, Innovation, and Technology)</h3>
+              <p>Master's degree, LDIT (MBA-Style) – Focus in Data Science and Financial Engineering. 2025 - 2026. Specializing in Artificial Intelligence and Financial Engineering.</p>
+            </div>
+          </div>
+          
+          <div className={styles.educationItem}>
+            <div className={styles.educationLogo}>
+              <img src="/3.jpg" alt="University of Oxford Logo" />
+            </div>
+            <div className={styles.educationDetails}>
+              <h3>University of Oxford (Bachelor's Degree Visiting Program)</h3>
+              <p>Studied advanced AI models and ethical considerations in machine learning.</p>
+            </div>
+          </div>
+
+          <div className={styles.educationItem}>
+            <div className={styles.educationLogo}>
+              <img src="/2.jpg" alt="Colby College Logo" />
+            </div>
+            <div className={styles.educationDetails}>
+              <h3>Colby College (B.A. in Computer Science)</h3>
+              <p>Graduated with a 3.92 Major GPA. Specialized in artificial intelligence and computational data analysis.</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -124,7 +144,7 @@ export const Home = () => {
         index={1}
         title="Financial Analytics & Data Science"
         description="Using both machine learning and finance knowledge to optimize investment strategies and financial decision-making."
-        buttonText="View Project"
+        buttonText="View Projects"
         buttonLink="https://www.linkedin.com/in/mahdeen-sameer-khan-892739232/"
         model={{
           type: 'laptop',
@@ -146,7 +166,7 @@ export const Home = () => {
         index={2}
         title="Building Inclusive EdTech Platforms"
         description="Developing accessible learning solutions to bridge educational gaps for all students."
-        buttonText="View Project"
+        buttonText="View Projects"
         buttonLink="https://www.linkedin.com/in/mahdeen-sameer-khan-892739232/"
         model={{
           type: 'phone',
@@ -171,7 +191,7 @@ export const Home = () => {
         index={3}
         title="AI Research & Policy in Education"
         description="Exploring ethical AI applications in education and policymaking for better learning outcomes."
-        buttonText="View Project"
+        buttonText="View Projects"
         buttonLink="https://www.linkedin.com/in/mahdeen-sameer-khan-892739232/"
         model={{
           type: 'laptop',
